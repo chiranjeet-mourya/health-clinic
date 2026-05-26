@@ -159,35 +159,35 @@ const DashboardSidebar = ({ collapsed }) => {
   return (
     <aside
       className={`bg-[#071739] text-white transition-all duration-300 sticky top-0 shrink-0 ${
-        collapsed ? "w-[90px]" : "w-[270px]"
+        collapsed ? "w-[90px]" : "w-[220px]"
       }`}
     >
       <div className=" border-b border-white/10">
         {collapsed ? (
           <img src={Logo2} alt="Medical Health Care" className="w-[200px] h-[80px] object-cover brightness-0 invert" />
         ) : (
-          <img src={Logo} alt="Medical Health Care" className="w-[250px] h-[80px] object-contain mx-auto brightness-0 invert"/>
+          <img src={Logo} alt="Medical Health Care" className="w-[200px] h-[80px] object-contain mx-auto brightness-0 invert"/>
         )}
       </div>
 
-      <div className="p-4 space-y-2 overflow-y-auto h-[calc(100vh-85px)]">
+      <div className="p-3 space-y-2 overflow-y-auto h-[calc(100vh-85px)]">
         {menus.map((item, index) => (
           <div key={index}>
             {item.children ? (
               <>
                 <button
                   onClick={() => toggleDropdown(item.name)}
-                  className={`w-full flex items-center justify-between gap-4 px-4 py-3 rounded-xl transition cursor-pointer ${
+                  className={`w-full flex items-center justify-between gap-4 px-2 py-2.5 rounded-xl transition cursor-pointer ${
                     openMenu === item.name
                       ? "bg-[#0ea5e9]"
                       : "hover:bg-white/10"
                   }`}
                 >
                   <div className="flex items-center gap-4">
-                    <span className="text-xl">{item.icon}</span>
+                    <span className="text-md text-left">{item.icon}</span>
 
                     {!collapsed && (
-                      <span className="font-medium">{item.name}</span>
+                      <span className="font-medium text-left">{item.name}</span>
                     )}
                   </div>
 
@@ -212,7 +212,7 @@ const DashboardSidebar = ({ collapsed }) => {
                           key={childIndex}
                           to={child.path}
                           className={({ isActive }) =>
-                            `flex items-center gap-3 px-4 py-2 rounded-lg text-sm transition ${
+                            `flex items-center gap-3 px-2 py-2 rounded-lg text-sm transition ${
                               isActive
                                 ? "bg-[#0ea5e9]/80 text-white"
                                 : "text-white/80 hover:bg-white/10 hover:text-white"
@@ -232,14 +232,14 @@ const DashboardSidebar = ({ collapsed }) => {
                 to={item.path}
                 end
                 className={({ isActive }) =>
-                  `flex items-center gap-4 px-4 py-3 rounded-xl transition ${
+                  `flex items-center gap-4 px-2 py-3 rounded-xl transition ${
                     isActive ? "bg-[#0ea5e9]" : "hover:bg-white/10"
                   }`
                 }
               >
-                <span className="text-xl">{item.icon}</span>
+                <span className="text-md">{item.icon}</span>
 
-                {!collapsed && <span className="font-medium">{item.name}</span>}
+                {!collapsed && <span className="font-medium text-md">{item.name}</span>}
               </NavLink>
             )}
           </div>

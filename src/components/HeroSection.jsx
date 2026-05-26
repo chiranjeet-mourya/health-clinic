@@ -51,7 +51,7 @@ const HeroSection = () => {
               ACCREDITED MEDICAL NETWORK
             </div>
 
-            <h1 className="text-white text-3xl md:text-7xl font-bold leading-tight mt-4">
+            <h1 className="text-white text-3xl md:text-6xl font-bold leading-tight mt-4">
               Quality Healthcare,
               <br />
               Centered Around

@@ -62,10 +62,10 @@ const Header = () => {
           onClick={closeMobileMenu}
           className="flex items-center gap-2 cursor-pointer"
         >
-          <img src={Logo} alt="Medical Health Care" className="w-[250px]" />
+          <img src={Logo} alt="Medical Health Care" className="w-[200px]" />
         </Link>
 
-        <ul className="hidden lg:flex items-center gap-8 font-medium text-gray-700">
+        <ul className="hidden lg:flex items-center gap-6 font-medium text-gray-700">
           {navLinks.slice(0, 5).map((item) => (
             <li key={item.path}>
               <NavLink to={item.path} className={linkClass}>
